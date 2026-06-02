@@ -2,7 +2,7 @@
 title = MeshChat
 package.name = meshchat
 package.domain = org.meshchat
-source.dir = src/
+source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,pem,db
 version = 1.0.0
 requirements = python3,kivy==2.2.1,kivymd==1.1.1,pycryptodome==3.19.0,plyer==2.1.0,ifaddr==0.2.0
@@ -18,10 +18,7 @@ android.gradle_dependencies = com.android.support:support-compat:28.0.0
 p4a.local_recipes = 
 icon.filename = %(source.dir)s/../assets/icon.png
 presplash.filename = %(source.dir)s/../assets/splash.png
-orientation = portrait
-osx.python_version = 3
-osx.kivy_version = 1.9.1
-author = MeshChat Team
+
 [buildozer]
 log_level = 2
 warn_on_root = 1
