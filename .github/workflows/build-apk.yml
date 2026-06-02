@@ -22,6 +22,15 @@ jobs:
         sudo apt-get install -y python3-pip build-essential git zip unzip openjdk-17-jdk
         pip install buildozer cython
     
+    - name: Accept Android SDK licenses
+      run: |
+        mkdir -p ~/.android
+        touch ~/.android/repositories.cfg
+        # Создаём папку для Android SDK, если Buildozer ещё не создал
+        mkdir -p ~/.buildozer/android/platform/android-sdk/cmdline-tools
+        # Принимаем лицензии через sdkmanager после первичной установки SDK
+        yes | ~/.buildozer/android/platform/android-sdk/cmdline-tools/latest/bin/sdkmanager --licenses || true
+    
     - name: Build APK
       run: |
         cd src
@@ -35,3 +44,4 @@ jobs:
         name: meshchat-apk
         path: src/bin/*.apk
         retention-days: 30
+
