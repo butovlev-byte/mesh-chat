@@ -14,8 +14,6 @@ android.minapi = 21
 android.sdk = 33
 android.ndk = 25b
 android.arch = arm64-v8a
-android.gradle_dependencies = com.android.support:support-compat:28.0.0
-p4a.local_recipes = 
 icon.filename = %(source.dir)s/../assets/icon.png
 presplash.filename = %(source.dir)s/../assets/splash.png
 
